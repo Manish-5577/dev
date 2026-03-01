@@ -11,6 +11,7 @@ public class AccountCacheService {
         Datetime startTime = System.now();
 Datetime startTime24 = System.now();
 Datetime startTime33 = System.now();
+system.debug('line fetaure cm1')
         // Get the partition object
         Cache.OrgPartition orgPart = Cache.Org.getPartition(PARTITION_NAME);
 
