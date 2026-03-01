@@ -1,0 +1,10 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<aura:attribute name="message" type="String" default="Hello from Aura attribute"/>
+<h1>ui changes againversion333</h1>
+    <p aura:id="msg">Hello from DOM element aura test </p>
+     <div>testing !!!!!! aura </div>
+    <lightning:button label="Test Locker" onclick="{!c.testLocker}" />
+    
+     <c:lightninglockerchild aura:id="childCmp" />
+    <!--   <c:lightninglockerchild  />  -->
+</aura:component>

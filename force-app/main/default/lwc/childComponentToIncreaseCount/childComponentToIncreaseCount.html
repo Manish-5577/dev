@@ -1,0 +1,23 @@
+<template>
+<div class={getbackgroundfromparent}>
+    <lightning-card  variant="Narrow"  title="Hello" icon-name="standard:account">
+      
+   {backgrndcolor}
+    <div class="wrapper">
+        <lightning-tile>
+            <p>{arritem.name}</p>
+
+            <lightning-button 
+                variant="brand" 
+                label="Increase count" 
+                onclick={handleClick}>
+            </lightning-button>
+
+            <div>id : {arritem.id}</div>
+            <div>Count : {arritem.count}</div>
+        </lightning-tile>
+    </div>
+    </lightning-card>
+</div>
+ 
+</template>

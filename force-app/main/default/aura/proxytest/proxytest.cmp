@@ -1,0 +1,11 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	
+    
+ <!--    <aura:attribute name="data" type="Object"/>
+    <lightning:button label="Test Locker" onclick="{!c.test}"/>  -->
+     <div id="myDiv" aura:id="div1">
+        <p>See how Lightning Locker restricts DOM access</p>
+    </div>
+    <lightning:button name="myButton" label="Peek in DOM"
+                aura:id="button1" onclick="{!c.peekInDom}"/>
+</aura:component>

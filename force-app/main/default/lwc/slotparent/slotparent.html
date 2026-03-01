@@ -1,0 +1,20 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Hello" icon-name="standard:account">
+      <div>
+    <h1>this is parent sents markup to child!!!!</h1>
+</div>
+<div>
+     <c-slotchild>
+       <template lwc:if={test}>
+        <span slot="onslot"> this is on slot demo</span>
+       </template> 
+       <template lwc:else>
+      <span slot="offslot"> this is off slot demo</span>
+  </template>
+        
+        
+  </c-slotchild>
+</div>
+    </lightning-card>
+
+</template>

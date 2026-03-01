@@ -1,0 +1,9 @@
+<template>
+ <h1> this is parent comp </h1>
+ <template if:true={arryitem} for:each={arryitem} for:item="arr" for:index="index">
+    <li key={arr.Id}>
+         <!-- check what if key is not there !!! -->
+         <c-child-component-to-increase-count arritem={arr}  onnext={handlecount} getbackgroundfromparent={passbackgrdid}></c-child-component-to-increase-count>
+    </li>
+ </template>
+</template>

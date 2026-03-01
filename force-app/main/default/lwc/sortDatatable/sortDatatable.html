@@ -1,0 +1,11 @@
+<template>
+<lightning-datatable
+    key-field="id"
+    data={oppList}
+    show-row-number-column
+    columns={columnlist}
+      sorted-by={sortedBy}
+        sorted-direction={sortDirection}
+    onsort={handleSort}>
+</lightning-datatable>
+</template>

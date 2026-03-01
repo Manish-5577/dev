@@ -1,0 +1,49 @@
+<template>
+<lightning-card  variant="Narrow"  title="Query Builder" icon-name="standard:account">
+<div class="slds-grid slds-gutters">
+  <div class="slds-col slds-size_1-of-5">
+    <lightning-combobox
+            name="progress"
+            label="Select Object Name!!!!!!!!!"
+            value={selectedObj}
+            placeholder="Select Progress"
+            options={objList}
+            onchange={handleChange} ></lightning-combobox>
+<div>
+  <div>
+    <lightning-input type="checkbox" variant="label-stacked" name="child Related" onchange={handleChange} checked={isChecked}  data-id="termsCheckbox" label="Include Related Record" placeholder="type here..."></lightning-input>
+  </div>
+<template lwc:if={isChecked}>
+    <div  class="checkbox-container">
+ <lightning-combobox
+            name="Checkbox Group"
+            label="Select Related Record"
+            value={selectchildObj}
+            placeholder="Select Progress"
+            options={childObjList}
+            onchange={handleChange} ></lightning-combobox>
+    </div>
+</template>
+  
+</div>
+  </div>
+  <div class="slds-col slds-size_3-of-5">
+    <span><h1> Select field to Display</h1></span>
+  </div>
+  <div class="slds-col slds-size_1-of-5">
+    <span>3</span>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+  
+</lightning-card>
+
+
+</template>

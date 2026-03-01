@@ -1,0 +1,17 @@
+<template>
+ <div>
+ <lightning-combobox
+            name="progress"
+            label="Status"
+            value={value}
+            placeholder="Select Progress"
+            options={picklistopt}
+            onchange={handleChange} ></lightning-combobox>
+
+    <p>Selected value is: {value}</p>
+ </div>
+
+    <div>
+        <lightning-input onchange={handlechange}   type="date" variant="standard" name="Date Test" label="datetest" placeholder="type here..."></lightning-input>
+    </div>
+</template>
