@@ -1,0 +1,81 @@
+<template>
+
+ <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Origin</th>
+                <th>ContactEmail</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+    <template if:true={caseRecList}>
+        <template for:each={caseRecList} for:item="caserec" for:index="index">
+            <tr key={caserec.Id}>
+                <td>
+                    <lightning-input
+                        label="Id"
+                        value={caserec.Id}
+                        disabled>
+                    </lightning-input>
+                </td>
+
+                <td>
+                    <lightning-input
+                        label="Case Origin"
+                        value={caserec.Origin}
+                        name="Origin"
+                        data-set={index}
+                        onchange={handlechange}
+                        disabled={caserec.isReadOnly}>
+                    </lightning-input>
+                </td>
+
+                <td>
+                    <lightning-input
+                        label="Contact Email"
+                        value={caserec.ContactEmail}
+                        name="ContactEmail"
+                        data-set={index}
+                        onchange={handlechange}
+                        disabled={caserec.isReadOnly}>
+                    </lightning-input>
+                </td>
+
+                <td>
+                    <lightning-input
+                        label="Case Status"
+                        value={caserec.Status}
+                        name="Status"
+                        data-set={index}
+                        onchange={handlechange}
+                        disabled={caserec.isReadOnly}>
+                    </lightning-input>
+                </td>
+
+                <td>
+                    <lightning-button
+                        label="Edit"
+                        data-index={index}
+                        onclick={Enableedit}
+                        disabled={caserec.isEditing}>
+                    </lightning-button>
+                </td>
+
+                <td>
+                    <lightning-button
+                        label="Save"
+                        data-index={index}
+                        onclick={handleUpdate}
+                        disabled={caserec.isReadOnly}>
+                    </lightning-button>
+                </td>
+            </tr>
+        </template>
+    </template>
+  </tbody>
+    </table>
+
+</template>

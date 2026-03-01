@@ -1,0 +1,52 @@
+<template>
+    <lightning-card variant="Narrow" title="Hello" icon-name="standard:account">
+        <div>
+            <lightning-button variant="brand" label="Add" title="Add" onclick={addrec}></lightning-button>
+        </div>
+        <div>
+            <lightning-button variant="brand" label="Save All" title="Add" onclick={saveall}></lightning-button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Testing</th>
+                </tr>
+            </thead>
+            <tbody>
+                <template lwc:if={childreclist}>
+                    <template if:true={childreclist} for:each={childreclist} for:item="con" for:index="index">
+                        <tr key={con.uniqeid}>
+                            <td>
+                                <lightning-input data-recid={con.Id}  data-id={con.uniqeid} disabled onchange={handleChange} type="text"
+                                    variant="standard" name="Id" label="Id" value={con.Id} placeholder="type here...">
+                                </lightning-input>
+                            </td>
+                            <td>
+                                <lightning-input data-recid={con.Id} data-id={con.uniqeid} disabled={con.disable} onchange={handleChange}
+                                    type="text" variant="standard" name="Name" label="Name" value={con.Name}
+                                    placeholder="type here..."></lightning-input>
+                            </td>
+                            <td>
+                                <lightning-combobox data-recid={con.Id} data-id={con.uniqeid}  disabled={con.disable} 
+                                         value={con.testing__c}
+                                         name="testing__c"
+                                    options={options} onchange={handleChange}></lightning-combobox>
+                            </td>
+                            <td>
+                                <lightning-button data-recid={con.Id} data-id={con.uniqeid} variant="brand" label="Edit" title="Edit"
+                                    onclick={handleClick}></lightning-button>
+                            </td>
+                        </tr>
+                    </template>
+                </template>
+                <template lwc:else>
+                    No record Found
+                </template>
+
+            </tbody>
+        </table>
+    </lightning-card>
+
+</template>

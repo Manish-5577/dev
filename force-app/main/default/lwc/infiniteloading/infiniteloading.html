@@ -1,0 +1,15 @@
+<template>
+     <div style="height: 300px">
+<lightning-datatable
+    key-field="id"
+    data={caselist}
+    show-row-number-column
+    row-number-offset={rowOffset}
+    hide-checkbox-column
+    columns={column}
+    enable-infinite-loading
+    onloadmore={loadMoreData}
+    onrowaction={handleRowAction}>
+</lightning-datatable>
+     </div>
+</template>

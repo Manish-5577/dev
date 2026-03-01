@@ -1,0 +1,27 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	
+     <div id="myDiv" aura:id="div1">
+        <p  aura:id="para1">See how Lightning Locker restricts DOM access</p>
+    </div>
+    
+      <aura:attribute name="person" type="Object"
+                    default="{
+                        'name' : 'Rahul',
+                        'age' : 28,
+                        'city' : 'Hyderabad'
+                    }"/>
+    <lightning:button name="myButton444" label="!!Peek in DOM22"
+                aura:id="button1" onclick="{!c.peekInDom}"/>
+    
+     <button onclick="{!c.handleClick}"  aura:id="button12" >
+        Click Me
+    </button> 
+    <!--   <aura:attribute name="items" type="List" default="[1,2,3,4,5]"/>
+
+    <aura:iteration items="{!v.items}" var="item">
+        <div class="box">Item {!item}</div>
+    </aura:iteration>
+
+   
+    <lightning:button label="Access DOM" onclick="{!c.accessDom}"/>  -->
+</aura:component>

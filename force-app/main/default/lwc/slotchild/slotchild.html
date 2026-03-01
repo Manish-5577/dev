@@ -1,0 +1,11 @@
+<template>
+  <template lwc:if={sll}>
+    <div>
+          content with on as true
+        <slot name="onslot"></slot>
+    </div>
+  </template>
+  <template lwc:else>
+      <slot name="offslot"></slot>
+  </template>
+</template>

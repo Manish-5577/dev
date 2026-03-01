@@ -1,0 +1,20 @@
+<template>
+<div style="height:300px">
+<lightning-datatable
+    key-field="id"
+    data={data}
+    hide-checkbox-column
+    columns={column}
+   >
+</lightning-datatable>
+<div>
+<lightning-button-group>
+  <lightning-button disabled={disablenext} onclick={handlenext} label="Next"></lightning-button>
+  <lightning-button disabled={disablepre} onclick={handleprev} label="Prev"></lightning-button>
+</lightning-button-group>
+</div>
+<div>
+  <lightning-button variant="mapcheck" label="mapcheck" title="titleName" onclick={handlemap}></lightning-button>
+</div>
+</div>
+</template>
