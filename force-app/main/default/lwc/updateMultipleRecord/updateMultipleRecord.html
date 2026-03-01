@@ -1,0 +1,46 @@
+<template>
+<div>
+<h1> Email : {Email}  </h1>
+<h1> Phone: {phone}   </h1>
+</div>
+<template lwc:if={enablespinnertwo}>
+ <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+</template>
+<lightning-button variant="brand" label="updateRecviaApex" title="rec" onclick={handleupdateviaApex}></lightning-button>
+<lightning-card  variant="Narrow"  title="Contacts3434" icon-name="standard:account">
+   <template lwc:if ={screenfirst}>
+    <div>
+<lightning-datatable
+    key-field="id"
+    data={data}
+    columns={columns}
+    onrowselection={getSelectedName}>
+</lightning-datatable>
+    </div>
+    <div>
+        <lightning-button variant="brand" label="Forward" title="titleName" onclick={handleClick}></lightning-button>
+    </div>
+   </template>
+   <template lwc:elseif= {screentwo}>
+    <template lwc:if={contactreclist} for:each={contactreclist} for:item="con" for:index="index">
+       <li key={con.result.id}>
+              <lightning-record-edit-form id="recordViewForm"
+                record-id={con.result.id}
+                object-api-name="Contact">
+        <lightning-messages></lightning-messages>
+        <lightning-input-field field-name="Phone"></lightning-input-field>
+         <lightning-input-field field-name="Email"></lightning-input-field>
+        <!-- submit -->
+        <lightning-button type="submit" label="Update record"></lightning-button>
+     </lightning-record-edit-form>
+       </li>
+    </template>
+    <template lwc:elseif={enableSpinner}>
+        <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+    </template>
+        </template>
+    <lightning-button variant="brand" label="final submit" title="handle submit" onclick={handlesubmit}></lightning-button>
+  
+  
+</lightning-card>
+</template>

@@ -1,0 +1,21 @@
+<template>key id are same  handle input changes !!!!
+
+
+   <lightning-card title="HelloForEach" icon-name="custom:custom14">
+   <template for:each={contacts} for:item="contact">
+        <p key={contact.Id}>
+            {contact.Name} - {contact.Title}
+        </p>
+    </template>
+
+    <lightning-button
+        label="Update Michael"
+        onclick={updateSecond}>
+    </lightning-button>
+  </lightning-card>
+  <!-- <template lwc:if ={visible}>
+  <c-behaviourof-obj-propertyinchild lwc:spread={childProps}></c-behaviourof-obj-propertyinchild>
+   </template>
+    <lightning-button variant="brand" label="renderchild" title="titleName" onclick={handleClick}></lightning-button> -->
+<lightning-input type="text" variant="standard" name="innnput" label="testing" onchange={handlechange} placeholder="type here..."></lightning-input>
+</template>

@@ -1,0 +1,19 @@
+<template>
+    lalalal set timeout
+   <lightning-button variant="brand" label="handlerec" title="titleName" onclick={handleClick}></lightning-button>
+    <template lwc:if ={showdatatable}>
+<lightning-datatable
+    key-field="id"
+    data={datalist}
+    columns={columnn}
+    onrowselection={getSelectedName}
+    onsave={handleSave}
+    onrowaction={handleRowAction}>
+</lightning-datatable>
+    </template>
+    <template lwc:if ={viewcon}>
+ <div>
+      <c-showcasechild-rec acc-idss={selectedAccid}></c-showcasechild-rec>
+    </div>
+    </template>
+</template>

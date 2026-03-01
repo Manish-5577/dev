@@ -1,0 +1,29 @@
+<template>
+<h1>this is child component</h1>
+<lightning-card  variant="Narrow"  title="Hello" icon-name="standard:account">
+   <template lwc:if={objfromParent}>
+    <template if:true={objfromParent} for:each={objfromParent} for:item="cobjon" for:index="index">
+       <li key={cobjon.id}>
+          <div class="demo-only" style="width:30rem">
+<article class="slds-tile">
+<h3 class="slds-tile__title slds-truncate" title="Salesforce UX">
+<a href="#">Salesforce UX</a>
+</h3>
+<div class="slds-tile__detail">
+<dl class="slds-list_horizontal slds-wrap">
+<dt class="slds-item_label slds-text-color_weak slds-truncate" title="First Label">{cobjon.id}</dt>
+<dd class="slds-item_detail slds-truncate" title="Description for first label">{cobjon.count}</dd>
+<dt class="slds-item_label slds-text-color_weak slds-truncate" title="Second Label">{cobjon.count}</dt>
+<dd class="slds-item_detail slds-truncate" title="Description for second label">{cobjon.count}</dd>
+</dl>
+</div>
+</article>
+</div>
+       <lightning-button variant="success" label="increaseCount" title="increaseCount" onclick={handleclick}></lightning-button>
+
+       </li>
+    </template>
+</template>
+</lightning-card>
+
+</template>

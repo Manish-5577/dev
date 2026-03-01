@@ -1,0 +1,8 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Hello" icon-name="standard:account">
+       <lightning-input type="text" variant="standard" name="lastname" onchange={handlechange} label="LastName" value = {contacRec.lastname} placeholder="type here..."></lightning-input>
+<lightning-input type="email" variant="standard" name="Email" onchange={handlechange} label="Email" value = {contacRec.email} placeholder="type here..."></lightning-input>
+<lightning-input type="number" variant="standard" name="Phone" onchange={handlechange} label="Phone" value = {contacRec.phone} placeholder="type here..."></lightning-input> 
+ <lightning-button variant="base" label="Save" title="Save" onclick={handleClick}></lightning-button>
+         </lightning-card>
+</template>

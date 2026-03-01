@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="Platform Event Listener">
+
+        <div class="slds-m-around_medium">
+            <lightning-button
+                label="Subscribe"
+                variant="brand"
+                onclick={handleSubscribe}
+                disabled={isSubscribed}
+            ></lightning-button>
+
+            <lightning-button
+                class="slds-m-left_small"
+                label="Unsubscribe"
+                variant="destructive"
+                onclick={handleUnsubscribe}
+                disabled={notSubscribed}
+            ></lightning-button>
+        </div>
+
+        <template if:true={latestEvent}>
+            <div class="slds-m-around_medium">
+                <h3><strong>Latest Event Payload:</strong></h3>
+                <pre>{latestEvent}</pre>
+            </div>
+        </template>
+
+    </lightning-card>
+</template>
