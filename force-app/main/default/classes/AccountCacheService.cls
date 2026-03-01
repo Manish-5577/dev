@@ -9,7 +9,7 @@ public class AccountCacheService {
 
         // Start timing
         Datetime startTime = System.now();
-
+ Datetime startTime22 = System.now();
         // Get the partition object
         Cache.OrgPartition orgPart = Cache.Org.getPartition(PARTITION_NAME);
 
